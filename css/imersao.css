@@ -1,0 +1,226 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*css/1.jpg*/
+
+body{
+  background-image: url("peixe.jpg");
+  background-size: 100vw 150vh;
+  /*font-family: 'Roboto', sans-serif;*/
+  font-family: 'Gloria Hallelujah', cursive;
+  height: 100vh;
+
+}
+/*https://images7.alphacoders.com/469/469674.jpg*/
+header{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card{
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 1s;
+}
+
+.cardFrente, .cardTrás{
+  backface-visibility: hidden;
+  position: absolute;
+
+}
+
+.cardTrás{
+  background-color: whitesmoke;
+  height: 240px;
+  width: 100%;
+  transform: rotateY(180deg);
+  border-radius: 50px;
+}
+
+.contato{
+  background: url(minions.jpg);
+  padding: 5em;
+  min-height: 100vh;
+}
+
+.contato a{
+  color: skyblue;
+  font-size: 7em;
+}
+
+.contato a:active,
+.contato a:hover{
+  text-shadow: 0px 0px 70px lightcyan;
+  transition: text-shadow 1s;
+}
+
+.contato h2{
+  font-family: 'Vast Shadow', cursive;
+  color: skyblue;
+  margin-bottom: 2em;
+  font-size: 2em;
+}
+
+.contato .icons {
+  display: grid;
+  gap: 10em;
+  grid-template-columns: 200px 200px ;
+  text-align: center;
+}
+
+@media (min-width: 560px){
+  .contato .icons {
+    grid-template-columns: 240px 240px ;
+  }
+
+@media (min-width: 800px){/*mínimo de largura para atingir essas medidas*/}
+  .contato .icons {
+    grid-template-columns: repeat(3, 240px);
+    justify-content: center;
+  }
+
+.flipCard{/*ligado ao card frente e trás*/
+  perspective: 500px;
+}
+
+.flipCard:hover .card{
+ transform: rotateY(180deg);
+}
+
+.fotografia{
+  background: url(002.jpg);
+  padding: 5em;
+  min-height: 100vh;
+}
+
+.fotografia .grid {
+  display: grid;
+  gap: 7em;
+  grid-template-columns: 200px 200px;
+  text-align: center;
+}
+
+@media (min-width: 560px){
+  .fotografia .grid {
+    grid-template-columns: 240px 240px;
+  }
+
+@media (min-width: 800px){/*mínimo de largura para atingir essas medidas*/}
+  .fotografia .grid {
+    grid-template-columns: repeat(3, 240px);
+    justify-content: center;
+  }
+
+.fotografia figure{
+  text-align: center;
+  color: midnightblue;
+}
+
+.fotografia h2, .sobre h2{
+  font-family: 'Vast Shadow', cursive;
+  color: whitesmoke;
+  margin-bottom: 2em;
+  font-size: 2em;
+}
+
+.grid a, .gj{
+color: whitesmoke;
+text-decoration: underline;
+}
+
+.img-fotografias{
+  height: 180px;
+  width: 200px;
+  object-fit: cover;/*figura tamanho que queremos, mas sem distorcer*/
+  border-radius: 50px; /*comer a borda*/
+}
+
+.menu{
+  background: white;
+  position: fixed;/*menu rola de acordo com a tela*/
+  width: 100vw ;
+  top: 0px;
+}
+
+.menu ul{
+  display: flex; /*colocar de lado*/
+  justify-content: space-around;
+}
+
+.menu li{
+  list-style: none;
+  /*background-color: pink;*/
+}
+
+.menu a{
+  display: block;
+  padding: 10px 20px;
+  transition: background-color 1s, color 1s;
+}
+
+.menu a:hover{/*ao passar o mouse*/
+  background-color: skyblue;
+  color: white;
+}
+
+.menu a{
+  color: skyblue;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline; /*colocar sublinhado quando mouse passa*/
+  /*background-color: red;*/ /*colocar cor quando o mouse passar*/
+}
+
+.site-title {
+  color: Whitesmoke;
+  text-align: center;
+  font-style: italic;
+}
+
+.site-title{
+  font-size: 2em;
+  font-family: 'Vast Shadow', cursive;
+}
+
+.site-subtitle{
+  color: Whitesmoke;
+  text-align: center;
+  font-style: italic;
+  font-family: 'Vast Shadow', cursive; 
+  line-height: 1.8em;
+}
+
+.sobre{
+  background: url(002.jpg);
+  padding: 5em;
+  min-height: 100vh;
+}
+
+.sobre p{
+  color: whitesmoke;
+  margin-bottom: 1.4em;
+  text-align: center;
+  text-indent: 1.4em;
+  font-family:roboto;
+}
+
+.sobre a{
+  color: magenta;
+}
+
+.sobre .avatar{
+  float: right;
+  margin-left: 2em;
+}
+
+.sobre .avatar img{
+  border-radius: 70px;
+  /*clip-path: circle(50% at 50% 50%);*/
+}
